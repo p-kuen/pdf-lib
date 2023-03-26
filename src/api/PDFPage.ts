@@ -1005,6 +1005,7 @@ export default class PDFPage {
         font: newFontKey,
         size: fontSize,
         rotate: options.rotate ?? degrees(0),
+        rotateOrigin: options.rotateOrigin,
         xSkew: options.xSkew ?? degrees(0),
         ySkew: options.ySkew ?? degrees(0),
         x: options.x ?? this.x,

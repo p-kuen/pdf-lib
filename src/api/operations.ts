@@ -31,6 +31,7 @@ import {
   clip,
   endPath,
   appendBezierCurve,
+  moveText,
 } from 'src/api/operators';
 import { Rotation, degrees, toRadians } from 'src/api/rotations';
 import { svgPathToOperators } from 'src/api/svgPath';
@@ -73,12 +74,20 @@ export const drawText = (
 
 export interface DrawLinesOfTextOptions extends DrawTextOptions {
   lineHeight: number | PDFNumber;
+  rotateOrigin?: { x?: number; y?: number };
 }
 
 export const drawLinesOfText = (
   lines: PDFHexString[],
   options: DrawLinesOfTextOptions,
 ): PDFOperator[] => {
+  const translationVector = [asNumber(options.x), asNumber(options.y)];
+
+  if (options?.rotateOrigin) {
+    translationVector[0] += options.rotateOrigin.x ?? 0;
+    translationVector[1] += options.rotateOrigin.y ?? 0;
+  }
+
   const operators = [
     pushGraphicsState(),
     options.graphicsState && setGraphicsState(options.graphicsState),
@@ -90,10 +99,16 @@ export const drawLinesOfText = (
       toRadians(options.rotate),
       toRadians(options.xSkew),
       toRadians(options.ySkew),
-      options.x,
-      options.y,
+      translationVector[0],
+      translationVector[1],
     ),
   ].filter(Boolean) as PDFOperator[];
+
+  if (options?.rotateOrigin) {
+    operators.push(
+      moveText(-(options.rotateOrigin.x ?? 0), -(options.rotateOrigin.y ?? 0)),
+    );
+  }
 
   for (let idx = 0, len = lines.length; idx < len; idx++) {
     operators.push(showText(lines[idx]), nextLine());

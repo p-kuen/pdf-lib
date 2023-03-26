@@ -25,6 +25,7 @@ export interface PDFPageDrawTextOptions {
   font?: PDFFont;
   size?: number;
   rotate?: Rotation;
+  rotateOrigin?: { x?: number; y?: number };
   xSkew?: Rotation;
   ySkew?: Rotation;
   x?: number;
