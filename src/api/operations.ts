@@ -75,9 +75,6 @@ export const drawText = (
       translationVector[0],
       translationVector[1],
     ),
-    showText(line),
-    endText(),
-    popGraphicsState(),
   ].filter(Boolean) as PDFOperator[];
 
   if (options?.rotateOrigin) {
@@ -85,6 +82,8 @@ export const drawText = (
       moveText(-(options.rotateOrigin.x ?? 0), -(options.rotateOrigin.y ?? 0)),
     );
   }
+
+  operators.push(showText(line), endText(), popGraphicsState());
 
   return operators;
 };
