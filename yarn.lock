@@ -812,6 +812,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@p-kuen/pdf-lib@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@p-kuen/pdf-lib@workspace:."
+  dependencies:
+    "@pdf-lib/fontkit": ^1.1.0
+    "@pdf-lib/standard-fonts": ^1.0.0
+    "@pdf-lib/upng": ^1.0.1
+    "@rollup/plugin-commonjs": ^13.0.0
+    "@rollup/plugin-json": ^4.1.0
+    "@rollup/plugin-node-resolve": ^8.0.1
+    "@types/jest": ^26.0.0
+    "@types/node-fetch": ^2.5.7
+    "@types/pako": ^1.0.1
+    "@zerollup/ts-transform-paths": ^1.7.18
+    downlevel-dts: ^0.5.0
+    flamebearer: ^1.1.3
+    http-server: ^0.12.3
+    jest: ^26.0.1
+    node-fetch: ^2.6.0
+    pako: ^1.0.11
+    prettier: ^2.0.5
+    rimraf: ^3.0.2
+    rollup: ^2.17.1
+    rollup-plugin-terser: ^6.1.0
+    ts-jest: ^26.1.0
+    tslib: ^1.11.1
+    tslint: ^6.1.2
+    tslint-config-prettier: ^1.18.0
+    ttypescript: ^1.5.15
+    typescript: ^3.9.5
+  languageName: unknown
+  linkType: soft
+
 "@pdf-lib/fontkit@npm:^1.1.0":
   version: 1.1.1
   resolution: "@pdf-lib/fontkit@npm:1.1.1"
@@ -4780,39 +4813,6 @@ __metadata:
   checksum: 49abf3d81115642938a8700ec580da6e830dde670be21893c62f4e10bd7dd4c3742ddc603fe24f898cba7eb0c6bc1777f8d9ac14185d34540c6d4d80cd9cae8a
   languageName: node
   linkType: hard
-
-"pdf-lib@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "pdf-lib@workspace:."
-  dependencies:
-    "@pdf-lib/fontkit": ^1.1.0
-    "@pdf-lib/standard-fonts": ^1.0.0
-    "@pdf-lib/upng": ^1.0.1
-    "@rollup/plugin-commonjs": ^13.0.0
-    "@rollup/plugin-json": ^4.1.0
-    "@rollup/plugin-node-resolve": ^8.0.1
-    "@types/jest": ^26.0.0
-    "@types/node-fetch": ^2.5.7
-    "@types/pako": ^1.0.1
-    "@zerollup/ts-transform-paths": ^1.7.18
-    downlevel-dts: ^0.5.0
-    flamebearer: ^1.1.3
-    http-server: ^0.12.3
-    jest: ^26.0.1
-    node-fetch: ^2.6.0
-    pako: ^1.0.11
-    prettier: ^2.0.5
-    rimraf: ^3.0.2
-    rollup: ^2.17.1
-    rollup-plugin-terser: ^6.1.0
-    ts-jest: ^26.1.0
-    tslib: ^1.11.1
-    tslint: ^6.1.2
-    tslint-config-prettier: ^1.18.0
-    ttypescript: ^1.5.15
-    typescript: ^3.9.5
-  languageName: unknown
-  linkType: soft
 
 "performance-now@npm:^2.1.0":
   version: 2.1.0
