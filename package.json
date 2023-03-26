@@ -1,5 +1,5 @@
 {
-  "name": "@p-kuen/pdf-lib",
+  "name": "@patcher56/pdf-lib",
   "version": "1.18.0-beta.0",
   "description": "Create and modify PDF files with JavaScript",
   "author": "Andrew Dillon <andrew.dillon.j@gmail.com>",
@@ -119,7 +119,10 @@
   },
   "license": "MIT",
   "homepage": "https://pdf-lib.js.org",
-  "repository": "git+https://github.com/Hopding/pdf-lib.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hopding/pdf-lib.git"
+  },
   "bugs": {
     "url": "https://github.com/Hopding/pdf-lib/issues"
   },
@@ -136,5 +139,9 @@
     "typescript",
     "javascript",
     "library"
-  ]
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  }
 }
