@@ -48,13 +48,21 @@ export interface DrawTextOptions {
   x: number | PDFNumber;
   y: number | PDFNumber;
   graphicsState?: string | PDFName;
+  rotateOrigin?: { x?: number; y?: number };
 }
 
 export const drawText = (
   line: PDFHexString,
   options: DrawTextOptions,
-): PDFOperator[] =>
-  [
+): PDFOperator[] => {
+  const translationVector = [asNumber(options.x), asNumber(options.y)];
+
+  if (options?.rotateOrigin) {
+    translationVector[0] += options.rotateOrigin.x ?? 0;
+    translationVector[1] += options.rotateOrigin.y ?? 0;
+  }
+
+  const operators = [
     pushGraphicsState(),
     options.graphicsState && setGraphicsState(options.graphicsState),
     beginText(),
@@ -64,17 +72,25 @@ export const drawText = (
       toRadians(options.rotate),
       toRadians(options.xSkew),
       toRadians(options.ySkew),
-      options.x,
-      options.y,
+      translationVector[0],
+      translationVector[1],
     ),
     showText(line),
     endText(),
     popGraphicsState(),
   ].filter(Boolean) as PDFOperator[];
 
+  if (options?.rotateOrigin) {
+    operators.push(
+      moveText(-(options.rotateOrigin.x ?? 0), -(options.rotateOrigin.y ?? 0)),
+    );
+  }
+
+  return operators;
+};
+
 export interface DrawLinesOfTextOptions extends DrawTextOptions {
   lineHeight: number | PDFNumber;
-  rotateOrigin?: { x?: number; y?: number };
 }
 
 export const drawLinesOfText = (
