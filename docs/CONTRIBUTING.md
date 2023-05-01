@@ -216,8 +216,8 @@ This should output something like the following:
 ```
 yarn run v1.16.0
 $ yarn build:cjs && yarn build:es && yarn build:umd && yarn build:umd:min
-$ ttsc --module commonjs --outDir cjs
-$ ttsc --module ES2015 --outDir es
+$ tsc --module commonjs --outDir cjs
+$ tsc --module ES2015 --outDir es
 $ rollup --config rollup.config.js --file dist/pdf-lib.js
 
 es/index.js → dist/pdf-lib.js...

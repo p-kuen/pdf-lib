@@ -1,15 +1,15 @@
-import PDFObject from 'src/core/objects/PDFObject';
-import CharCodes from 'src/core/syntax/CharCodes';
+import { InvalidPDFDateStringError } from '../../core/errors';
+import PDFObject from '../../core/objects/PDFObject';
+import CharCodes from '../../core/syntax/CharCodes';
 import {
   copyStringIntoBuffer,
+  hasUtf16BOM,
   padStart,
-  utf16Decode,
+  parseDate,
   pdfDocEncodingDecode,
   toCharCode,
-  parseDate,
-  hasUtf16BOM,
-} from 'src/utils';
-import { InvalidPDFDateStringError } from 'src/core/errors';
+  utf16Decode,
+} from '../../utils';
 
 class PDFString extends PDFObject {
   // The PDF spec allows newlines and parens to appear directly within a literal

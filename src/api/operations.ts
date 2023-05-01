@@ -1,42 +1,42 @@
-import { Color, setFillingColor, setStrokingColor } from 'src/api/colors';
+import { Color, setFillingColor, setStrokingColor } from '../api/colors';
+import { asNumber } from '../api/objects';
 import {
+  LineCapStyle,
+  appendBezierCurve,
+  beginMarkedContent,
   beginText,
+  clip,
   closePath,
   drawObject,
+  endMarkedContent,
+  endPath,
   endText,
   fill,
   fillAndStroke,
   lineTo,
+  moveText,
   moveTo,
   nextLine,
   popGraphicsState,
   pushGraphicsState,
   rotateAndSkewTextRadiansAndTranslate,
+  rotateDegrees,
   rotateRadians,
   scale,
+  setDashPattern,
   setFontAndSize,
+  setGraphicsState,
+  setLineCap,
   setLineHeight,
   setLineWidth,
   showText,
   skewRadians,
   stroke,
   translate,
-  LineCapStyle,
-  setLineCap,
-  rotateDegrees,
-  setGraphicsState,
-  setDashPattern,
-  beginMarkedContent,
-  endMarkedContent,
-  clip,
-  endPath,
-  appendBezierCurve,
-  moveText,
-} from 'src/api/operators';
-import { Rotation, degrees, toRadians } from 'src/api/rotations';
-import { svgPathToOperators } from 'src/api/svgPath';
-import { PDFHexString, PDFName, PDFNumber, PDFOperator } from 'src/core';
-import { asNumber } from 'src/api/objects';
+} from '../api/operators';
+import { Rotation, degrees, toRadians } from '../api/rotations';
+import { svgPathToOperators } from '../api/svgPath';
+import { PDFHexString, PDFName, PDFNumber, PDFOperator } from '../core';
 
 export interface DrawTextOptions {
   color: Color;

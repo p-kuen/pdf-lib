@@ -1,39 +1,39 @@
-import { PDFOperator, PDFWidgetAnnotation } from 'src/core';
-import PDFFont from 'src/api/PDFFont';
-import PDFButton from 'src/api/form/PDFButton';
-import PDFCheckBox from 'src/api/form/PDFCheckBox';
-import PDFDropdown from 'src/api/form/PDFDropdown';
-import PDFField from 'src/api/form/PDFField';
-import PDFOptionList from 'src/api/form/PDFOptionList';
-import PDFRadioGroup from 'src/api/form/PDFRadioGroup';
-import PDFSignature from 'src/api/form/PDFSignature';
-import PDFTextField from 'src/api/form/PDFTextField';
+import PDFFont from '../../api/PDFFont';
 import {
-  drawCheckBox,
-  rotateInPlace,
-  drawRadioButton,
-  drawButton,
-  drawTextField,
-  drawOptionList,
-} from 'src/api/operations';
-import {
-  rgb,
-  componentsToColor,
-  setFillingColor,
-  grayscale,
-  cmyk,
   Color,
-} from 'src/api/colors';
-import { reduceRotation, adjustDimsForRotation } from 'src/api/rotations';
+  cmyk,
+  componentsToColor,
+  grayscale,
+  rgb,
+  setFillingColor,
+} from '../../api/colors';
+import PDFButton from '../../api/form/PDFButton';
+import PDFCheckBox from '../../api/form/PDFCheckBox';
+import PDFDropdown from '../../api/form/PDFDropdown';
+import PDFField from '../../api/form/PDFField';
+import PDFOptionList from '../../api/form/PDFOptionList';
+import PDFRadioGroup from '../../api/form/PDFRadioGroup';
+import PDFSignature from '../../api/form/PDFSignature';
+import PDFTextField from '../../api/form/PDFTextField';
 import {
-  layoutMultilineText,
-  layoutCombedText,
+  drawButton,
+  drawCheckBox,
+  drawOptionList,
+  drawRadioButton,
+  drawTextField,
+  rotateInPlace,
+} from '../../api/operations';
+import { setFontAndSize } from '../../api/operators';
+import { adjustDimsForRotation, reduceRotation } from '../../api/rotations';
+import { TextAlignment } from '../../api/text/alignment';
+import {
   TextPosition,
+  layoutCombedText,
+  layoutMultilineText,
   layoutSinglelineText,
-} from 'src/api/text/layout';
-import { TextAlignment } from 'src/api/text/alignment';
-import { setFontAndSize } from 'src/api/operators';
-import { findLastMatch } from 'src/utils';
+} from '../../api/text/layout';
+import { PDFOperator, PDFWidgetAnnotation } from '../../core';
+import { findLastMatch } from '../../utils';
 
 /*********************** Appearance Provider Types ****************************/
 

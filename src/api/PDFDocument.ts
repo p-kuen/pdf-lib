@@ -1,23 +1,33 @@
-import Embeddable from 'src/api/Embeddable';
+import Embeddable from '../api/Embeddable';
+import {
+  AttachmentOptions,
+  Base64SaveOptions,
+  CreateOptions,
+  EmbedFontOptions,
+  LoadOptions,
+  ParseSpeeds,
+  SaveOptions,
+  SetTitleOptions,
+} from '../api/PDFDocumentOptions';
+import PDFEmbeddedFile from '../api/PDFEmbeddedFile';
+import PDFEmbeddedPage from '../api/PDFEmbeddedPage';
+import PDFFont from '../api/PDFFont';
+import PDFImage from '../api/PDFImage';
+import PDFJavaScript from '../api/PDFJavaScript';
+import PDFPage from '../api/PDFPage';
+import { StandardFonts } from '../api/StandardFonts';
 import {
   EncryptedPDFError,
   FontkitNotRegisteredError,
   ForeignPageError,
   RemovePageFromEmptyDocumentError,
-} from 'src/api/errors';
-import PDFEmbeddedPage from 'src/api/PDFEmbeddedPage';
-import PDFFont from 'src/api/PDFFont';
-import PDFImage from 'src/api/PDFImage';
-import PDFPage from 'src/api/PDFPage';
-import PDFForm from 'src/api/form/PDFForm';
-import { PageSizes } from 'src/api/sizes';
-import { StandardFonts } from 'src/api/StandardFonts';
+} from '../api/errors';
+import PDFForm from '../api/form/PDFForm';
+import { PageSizes } from '../api/sizes';
 import {
   CustomFontEmbedder,
   CustomFontSubsetEmbedder,
   JpegEmbedder,
-  PageBoundingBox,
-  PageEmbeddingMismatchedContextError,
   PDFCatalog,
   PDFContext,
   PDFDict,
@@ -31,41 +41,31 @@ import {
   PDFStreamWriter,
   PDFString,
   PDFWriter,
+  PageBoundingBox,
+  PageEmbeddingMismatchedContextError,
   PngEmbedder,
   StandardFontEmbedder,
   UnexpectedObjectTypeError,
-} from 'src/core';
+} from '../core';
+import FileEmbedder, { AFRelationship } from '../core/embedders/FileEmbedder';
+import JavaScriptEmbedder from '../core/embedders/JavaScriptEmbedder';
+import PDFObject from '../core/objects/PDFObject';
+import PDFRef from '../core/objects/PDFRef';
+import { Fontkit } from '../types/fontkit';
+import { TransformationMatrix } from '../types/matrix';
 import {
-  ParseSpeeds,
-  AttachmentOptions,
-  SaveOptions,
-  Base64SaveOptions,
-  LoadOptions,
-  CreateOptions,
-  EmbedFontOptions,
-  SetTitleOptions,
-} from 'src/api/PDFDocumentOptions';
-import PDFObject from 'src/core/objects/PDFObject';
-import PDFRef from 'src/core/objects/PDFRef';
-import { Fontkit } from 'src/types/fontkit';
-import { TransformationMatrix } from 'src/types/matrix';
-import {
+  Cache,
   assertIs,
   assertIsOneOfOrUndefined,
   assertOrUndefined,
   assertRange,
-  Cache,
   canBeConvertedToUint8Array,
   encodeToBase64,
   isStandardFont,
   pluckIndices,
   range,
   toUint8Array,
-} from 'src/utils';
-import FileEmbedder, { AFRelationship } from 'src/core/embedders/FileEmbedder';
-import PDFEmbeddedFile from 'src/api/PDFEmbeddedFile';
-import PDFJavaScript from 'src/api/PDFJavaScript';
-import JavaScriptEmbedder from 'src/core/embedders/JavaScriptEmbedder';
+} from '../utils';
 
 /**
  * Represents a PDF document.

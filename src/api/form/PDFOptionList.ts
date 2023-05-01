@@ -1,33 +1,33 @@
-import PDFDocument from 'src/api/PDFDocument';
-import PDFPage from 'src/api/PDFPage';
-import PDFFont from 'src/api/PDFFont';
+import PDFDocument from '../../api/PDFDocument';
+import PDFFont from '../../api/PDFFont';
+import PDFPage from '../../api/PDFPage';
+import { rgb } from '../../api/colors';
 import PDFField, {
   FieldAppearanceOptions,
   assertFieldAppearanceOptions,
-} from 'src/api/form/PDFField';
+} from '../../api/form/PDFField';
 import {
   AppearanceProviderFor,
-  normalizeAppearance,
   defaultOptionListAppearanceProvider,
-} from 'src/api/form/appearances';
-import { rgb } from 'src/api/colors';
-import { degrees } from 'src/api/rotations';
+  normalizeAppearance,
+} from '../../api/form/appearances';
+import { degrees } from '../../api/rotations';
 
 import {
-  PDFRef,
-  PDFHexString,
-  PDFString,
-  PDFStream,
-  PDFAcroListBox,
   AcroChoiceFlags,
+  PDFAcroListBox,
+  PDFHexString,
+  PDFRef,
+  PDFStream,
+  PDFString,
   PDFWidgetAnnotation,
-} from 'src/core';
+} from '../../core';
 import {
   assertIs,
   assertIsSubset,
   assertOrUndefined,
   assertPositive,
-} from 'src/utils';
+} from '../../utils';
 
 /**
  * Represents an option list field of a [[PDFForm]].

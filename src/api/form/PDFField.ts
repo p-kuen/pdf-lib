@@ -1,30 +1,30 @@
-import PDFDocument from 'src/api/PDFDocument';
-import PDFFont from 'src/api/PDFFont';
-import { AppearanceMapping } from 'src/api/form/appearances';
-import { Color, colorToComponents, setFillingColor } from 'src/api/colors';
+import PDFDocument from '../../api/PDFDocument';
+import PDFFont from '../../api/PDFFont';
+import { Color, colorToComponents, setFillingColor } from '../../api/colors';
+import { AppearanceMapping } from '../../api/form/appearances';
 import {
   Rotation,
-  toDegrees,
-  rotateRectangle,
-  reduceRotation,
   adjustDimsForRotation,
   degrees,
-} from 'src/api/rotations';
+  reduceRotation,
+  rotateRectangle,
+  toDegrees,
+} from '../../api/rotations';
 
 import {
+  AcroFieldFlags,
+  AnnotationFlags,
+  MethodNotImplementedError,
+  PDFAcroTerminal,
+  PDFDict,
+  PDFName,
+  PDFOperator,
   PDFRef,
   PDFWidgetAnnotation,
-  PDFOperator,
-  PDFName,
-  PDFDict,
-  MethodNotImplementedError,
-  AcroFieldFlags,
-  PDFAcroTerminal,
-  AnnotationFlags,
-} from 'src/core';
-import { assertIs, assertMultiple, assertOrUndefined } from 'src/utils';
-import { ImageAlignment } from '../image';
+} from '../../core';
+import { assertIs, assertMultiple, assertOrUndefined } from '../../utils';
 import PDFImage from '../PDFImage';
+import { ImageAlignment } from '../image';
 import { drawImage, rotateInPlace } from '../operations';
 
 export interface FieldAppearanceOptions {

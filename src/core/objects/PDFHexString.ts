@@ -1,15 +1,15 @@
-import PDFObject from 'src/core/objects/PDFObject';
-import CharCodes from 'src/core/syntax/CharCodes';
+import { InvalidPDFDateStringError } from '../../core/errors';
+import PDFObject from '../../core/objects/PDFObject';
+import CharCodes from '../../core/syntax/CharCodes';
 import {
   copyStringIntoBuffer,
+  hasUtf16BOM,
+  parseDate,
+  pdfDocEncodingDecode,
   toHexStringOfMinLength,
   utf16Decode,
   utf16Encode,
-  pdfDocEncodingDecode,
-  parseDate,
-  hasUtf16BOM,
-} from 'src/utils';
-import { InvalidPDFDateStringError } from 'src/core/errors';
+} from '../../utils';
 
 class PDFHexString extends PDFObject {
   static of = (value: string) => new PDFHexString(value);

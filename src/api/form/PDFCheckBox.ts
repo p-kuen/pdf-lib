@@ -1,25 +1,25 @@
-import PDFDocument from 'src/api/PDFDocument';
-import PDFPage from 'src/api/PDFPage';
-import {
-  AppearanceProviderFor,
-  normalizeAppearance,
-  defaultCheckBoxAppearanceProvider,
-} from 'src/api/form/appearances';
-import { rgb } from 'src/api/colors';
-import { degrees } from 'src/api/rotations';
+import PDFDocument from '../../api/PDFDocument';
+import PDFPage from '../../api/PDFPage';
+import { rgb } from '../../api/colors';
 import PDFField, {
   FieldAppearanceOptions,
   assertFieldAppearanceOptions,
-} from 'src/api/form/PDFField';
+} from '../../api/form/PDFField';
+import {
+  AppearanceProviderFor,
+  defaultCheckBoxAppearanceProvider,
+  normalizeAppearance,
+} from '../../api/form/appearances';
+import { degrees } from '../../api/rotations';
 
 import {
+  PDFAcroCheckBox,
+  PDFDict,
   PDFName,
   PDFRef,
-  PDFDict,
-  PDFAcroCheckBox,
   PDFWidgetAnnotation,
-} from 'src/core';
-import { assertIs, assertOrUndefined } from 'src/utils';
+} from '../../core';
+import { assertIs, assertOrUndefined } from '../../utils';
 
 /**
  * Represents a check box field of a [[PDFForm]].

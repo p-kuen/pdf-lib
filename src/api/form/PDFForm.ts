@@ -1,47 +1,47 @@
-import PDFDocument from 'src/api/PDFDocument';
-import PDFPage from 'src/api/PDFPage';
-import PDFField from 'src/api/form/PDFField';
-import PDFButton from 'src/api/form/PDFButton';
-import PDFCheckBox from 'src/api/form/PDFCheckBox';
-import PDFDropdown from 'src/api/form/PDFDropdown';
-import PDFOptionList from 'src/api/form/PDFOptionList';
-import PDFRadioGroup from 'src/api/form/PDFRadioGroup';
-import PDFSignature from 'src/api/form/PDFSignature';
-import PDFTextField from 'src/api/form/PDFTextField';
+import PDFDocument from '../../api/PDFDocument';
+import PDFFont from '../../api/PDFFont';
+import PDFPage from '../../api/PDFPage';
+import { StandardFonts } from '../../api/StandardFonts';
 import {
-  NoSuchFieldError,
-  UnexpectedFieldTypeError,
   FieldAlreadyExistsError,
   InvalidFieldNamePartError,
-} from 'src/api/errors';
-import PDFFont from 'src/api/PDFFont';
-import { StandardFonts } from 'src/api/StandardFonts';
-import { rotateInPlace } from 'src/api/operations';
+  NoSuchFieldError,
+  UnexpectedFieldTypeError,
+} from '../../api/errors';
+import PDFButton from '../../api/form/PDFButton';
+import PDFCheckBox from '../../api/form/PDFCheckBox';
+import PDFDropdown from '../../api/form/PDFDropdown';
+import PDFField from '../../api/form/PDFField';
+import PDFOptionList from '../../api/form/PDFOptionList';
+import PDFRadioGroup from '../../api/form/PDFRadioGroup';
+import PDFSignature from '../../api/form/PDFSignature';
+import PDFTextField from '../../api/form/PDFTextField';
+import { rotateInPlace } from '../../api/operations';
 import {
   drawObject,
   popGraphicsState,
   pushGraphicsState,
   translate,
-} from 'src/api/operators';
+} from '../../api/operators';
 import {
-  PDFAcroForm,
-  PDFAcroField,
   PDFAcroCheckBox,
   PDFAcroComboBox,
+  PDFAcroField,
+  PDFAcroForm,
   PDFAcroListBox,
+  PDFAcroNonTerminal,
+  PDFAcroPushButton,
   PDFAcroRadioButton,
   PDFAcroSignature,
   PDFAcroText,
-  PDFAcroPushButton,
-  PDFAcroNonTerminal,
   PDFDict,
+  PDFName,
   PDFOperator,
   PDFRef,
-  createPDFAcroFields,
-  PDFName,
   PDFWidgetAnnotation,
-} from 'src/core';
-import { assertIs, Cache, assertOrUndefined } from 'src/utils';
+  createPDFAcroFields,
+} from '../../core';
+import { Cache, assertIs, assertOrUndefined } from '../../utils';
 
 export interface FlattenOptions {
   updateFieldAppearances: boolean;

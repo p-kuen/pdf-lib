@@ -1,17 +1,17 @@
-import PDFBool from 'src/core/objects/PDFBool';
-import PDFDict from 'src/core/objects/PDFDict';
-import PDFHexString from 'src/core/objects/PDFHexString';
-import PDFName from 'src/core/objects/PDFName';
-import PDFNull from 'src/core/objects/PDFNull';
-import PDFNumber from 'src/core/objects/PDFNumber';
-import PDFObject from 'src/core/objects/PDFObject';
-import PDFRef from 'src/core/objects/PDFRef';
-import PDFStream from 'src/core/objects/PDFStream';
-import PDFString from 'src/core/objects/PDFString';
-import PDFContext from 'src/core/PDFContext';
-import CharCodes from 'src/core/syntax/CharCodes';
-import { PDFArrayIsNotRectangleError } from 'src/core/errors';
-import PDFRawStream from 'src/core/objects/PDFRawStream';
+import PDFContext from '../../core/PDFContext';
+import { PDFArrayIsNotRectangleError } from '../../core/errors';
+import PDFBool from '../../core/objects/PDFBool';
+import PDFDict from '../../core/objects/PDFDict';
+import PDFHexString from '../../core/objects/PDFHexString';
+import PDFName from '../../core/objects/PDFName';
+import PDFNull from '../../core/objects/PDFNull';
+import PDFNumber from '../../core/objects/PDFNumber';
+import PDFObject from '../../core/objects/PDFObject';
+import PDFRawStream from '../../core/objects/PDFRawStream';
+import PDFRef from '../../core/objects/PDFRef';
+import PDFStream from '../../core/objects/PDFStream';
+import PDFString from '../../core/objects/PDFString';
+import CharCodes from '../../core/syntax/CharCodes';
 
 class PDFArray extends PDFObject {
   static withContext = (context: PDFContext) => new PDFArray(context);
