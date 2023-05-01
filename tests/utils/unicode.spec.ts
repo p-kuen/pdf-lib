@@ -1,8 +1,9 @@
+import { describe, expect, it } from '@jest/globals';
 import {
   mergeIntoTypedArray,
+  utf16Decode,
   utf16Encode,
   utf8Encode,
-  utf16Decode,
 } from 'src/utils';
 
 const utf8BOM = new Uint8Array([0xef, 0xbb, 0xbf]);

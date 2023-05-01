@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { PDFDocument, StandardFonts, TextAlignment } from 'src/index';
 
 import { layoutMultilineText } from 'src/api/text/layout';

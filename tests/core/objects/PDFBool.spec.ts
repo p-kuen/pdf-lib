@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { PDFBool, PrivateConstructorError } from 'src/core';
 import { toCharCode, typedArrayFor } from 'src/utils';
 

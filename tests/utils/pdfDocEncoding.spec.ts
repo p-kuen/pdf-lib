@@ -1,4 +1,6 @@
-import { range, pdfDocEncodingDecode } from 'src/utils';
+import { describe, expect, it } from '@jest/globals';
+
+import { pdfDocEncodingDecode, range } from 'src/utils';
 
 type Mapping = [number, string];
 

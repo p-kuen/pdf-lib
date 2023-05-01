@@ -1,4 +1,6 @@
 import fs from 'fs';
+import { describe, expect, it } from '@jest/globals';
+
 import { JpegEmbedder, PDFContext, PDFRawStream, PDFRef } from 'src/core';
 
 const catUnicornJpg = fs.readFileSync('./assets/images/cat_riding_unicorn.jpg');

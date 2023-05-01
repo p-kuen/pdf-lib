@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { describe, expect, it } from '@jest/globals';
 
 import RunLengthStream from 'src/core/streams/RunLengthStream';
 import Stream from 'src/core/streams/Stream';

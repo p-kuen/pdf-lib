@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import fs from 'fs';
 
 import { PDFContext, PDFName, PDFRef, PDFStreamWriter } from 'src/index';

@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { PDFContext, PDFDict, PDFRawStream } from 'src/core';
 import { mergeIntoTypedArray, toCharCode } from 'src/utils';
 

@@ -1,5 +1,7 @@
+import { describe, expect, it } from '@jest/globals';
 import fs from 'fs';
-import { PDFDocument, TextAlignment, AnnotationFlags } from 'src/index';
+
+import { AnnotationFlags, PDFDocument, TextAlignment } from 'src/index';
 
 const fancyFieldsPdfBytes = fs.readFileSync('assets/pdfs/fancy_fields.pdf');
 

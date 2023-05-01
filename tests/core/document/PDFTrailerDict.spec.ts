@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { PDFContext, PDFTrailerDict } from 'src/core';
 import { toCharCode, typedArrayFor } from 'src/utils';
 

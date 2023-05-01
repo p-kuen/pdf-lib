@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { SimpleRNG } from 'src/utils/rng';
 
 describe(`psuedo random numbers`, () => {

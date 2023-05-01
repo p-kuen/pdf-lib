@@ -1,18 +1,28 @@
-import fs from 'fs';
 import {
-  PDFDocument,
-  PDFTextField,
-  PDFCheckBox,
-  PDFButton,
-  PDFRadioGroup,
-  PDFOptionList,
-  PDFDropdown,
-  PDFWidgetAnnotation,
-  PDFDict,
-  PDFName,
-  PDFForm,
+  afterAll,
+  beforeAll,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  jest,
+} from '@jest/globals';
+import fs from 'fs';
+
+import {
   PDFAcroForm,
+  PDFButton,
+  PDFCheckBox,
+  PDFDict,
+  PDFDocument,
+  PDFDropdown,
+  PDFForm,
+  PDFName,
+  PDFOptionList,
+  PDFRadioGroup,
   PDFRef,
+  PDFTextField,
+  PDFWidgetAnnotation,
 } from 'src/index';
 
 const getWidgets = (pdfDoc: PDFDocument) =>
@@ -60,7 +70,7 @@ describe(`PDFForm`, () => {
     const ignoredWarnings = [
       'Removing XFA form data as pdf-lib does not support reading or writing XFA',
     ];
-    console.warn = jest.fn((...args) => {
+    console.warn = jest.fn((...args: any[]) => {
       const isIgnored = ignoredWarnings.find((iw) => args[0].includes(iw));
       if (!isIgnored) origConsoleWarn(...args);
     });

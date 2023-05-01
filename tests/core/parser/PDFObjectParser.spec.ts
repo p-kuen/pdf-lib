@@ -1,3 +1,12 @@
+import {
+  describe,
+  expect,
+  beforeAll,
+  jest,
+  beforeEach,
+  afterAll,
+  it,
+} from '@jest/globals';
 import PDFPageLeaf from 'src/core/structures/PDFPageLeaf';
 import {
   mergeIntoTypedArray,
@@ -44,7 +53,7 @@ describe(`PDFObjectParser`, () => {
     const ignoredWarnings = [
       'Parsed number that is too large for some PDF readers:',
     ];
-    console.warn = jest.fn((...args) => {
+    console.warn = jest.fn((...args: any[]) => {
       const isIgnored = ignoredWarnings.find((iw) => args[0].includes(iw));
       if (!isIgnored) origConsoleWarn(...args);
     });

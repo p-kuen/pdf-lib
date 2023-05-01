@@ -1,16 +1,26 @@
+import {
+  afterAll,
+  beforeAll,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  jest,
+} from '@jest/globals';
 import fontkit from '@pdf-lib/fontkit';
 import fs from 'fs';
+
 import {
+  Duplex,
   EncryptedPDFError,
-  ParseSpeeds,
+  NonFullScreenPageMode,
   PDFArray,
   PDFDict,
   PDFDocument,
   PDFHexString,
   PDFName,
   PDFPage,
-  Duplex,
-  NonFullScreenPageMode,
+  ParseSpeeds,
   PrintScaling,
   ReadingDirection,
   ViewerPreferences,
@@ -47,7 +57,7 @@ describe(`PDFDocument`, () => {
         'Trying to parse invalid object:',
         'Invalid object ref:',
       ];
-      console.warn = jest.fn((...args) => {
+      console.warn = jest.fn((...args: any[]) => {
         const isIgnored = ignoredWarnings.find((iw) => args[0].includes(iw));
         if (!isIgnored) origConsoleWarn(...args);
       });

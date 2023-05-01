@@ -1,4 +1,6 @@
 import fs from 'fs';
+import { describe, expect, it } from '@jest/globals';
+
 import {
   PDFArray,
   PDFBool,

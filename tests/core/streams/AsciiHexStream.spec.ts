@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { describe, expect, it } from '@jest/globals';
 
 import AsciiHexStream from 'src/core/streams/AsciiHexStream';
 import Stream from 'src/core/streams/Stream';

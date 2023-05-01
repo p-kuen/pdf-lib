@@ -1,4 +1,6 @@
 import fs from 'fs';
+import { describe, expect, it } from '@jest/globals';
+
 import { PDFContext, PDFRawStream, PDFRef, PngEmbedder } from 'src/core';
 
 const greyscalePng = fs.readFileSync('./assets/images/greyscale_bird.png');

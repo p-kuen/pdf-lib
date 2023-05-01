@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { PDFNull } from 'src/core';
 import { toCharCode, typedArrayFor } from 'src/utils';
 

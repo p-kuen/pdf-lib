@@ -1,4 +1,6 @@
 import { FontNames } from '@pdf-lib/standard-fonts';
+import { describe, expect, it } from '@jest/globals';
+
 import {
   PDFContext,
   PDFDict,

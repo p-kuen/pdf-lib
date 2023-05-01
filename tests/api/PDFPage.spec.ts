@@ -1,4 +1,6 @@
+import { describe, expect, it } from '@jest/globals';
 import fs from 'fs';
+
 import { PDFArray, PDFDocument, PDFName, StandardFonts } from 'src/index';
 
 const birdPng = fs.readFileSync('assets/images/greyscale_bird.png');

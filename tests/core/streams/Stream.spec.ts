@@ -1,3 +1,5 @@
+import { describe, expect, beforeEach, it } from '@jest/globals';
+
 import Stream from 'src/core/streams/Stream';
 
 describe(`Stream`, () => {

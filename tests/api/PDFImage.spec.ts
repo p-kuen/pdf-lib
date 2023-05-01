@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { PDFDocument, PDFImage } from 'src/api';
 import { PngEmbedder } from 'src/core';
 import { toUint8Array } from 'src/utils';

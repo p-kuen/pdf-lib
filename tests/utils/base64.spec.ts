@@ -1,4 +1,6 @@
+import { describe, expect, it } from '@jest/globals';
 import fs from 'fs';
+
 import { decodeFromBase64DataUri } from 'src/utils';
 
 const pdfBytes = fs.readFileSync('tests/utils/data/simple.pdf');

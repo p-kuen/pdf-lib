@@ -1,4 +1,13 @@
 import fs from 'fs';
+import {
+  describe,
+  expect,
+  beforeAll,
+  jest,
+  beforeEach,
+  afterAll,
+  it,
+} from '@jest/globals';
 
 import {
   CharCodes,
@@ -23,7 +32,7 @@ describe(`PDFParser`, () => {
       'Invalid object ref:',
       'Removing parsed object: 0 0 R',
     ];
-    console.warn = jest.fn((...args) => {
+    console.warn = jest.fn((...args: any[]) => {
       const isIgnored = ignoredWarnings.find((iw) => args[0].includes(iw));
       if (!isIgnored) origConsoleWarn(...args);
     });

@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { describe, expect, it } from '@jest/globals';
 
 import FlateStream from 'src/core/streams/FlateStream';
 import Stream from 'src/core/streams/Stream';

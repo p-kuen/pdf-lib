@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { PDFAcroTerminal, PDFContext, PDFRef, PDFArray } from 'src/index';
 
 describe(`PDFAcroTerminal`, () => {

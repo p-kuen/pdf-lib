@@ -1,4 +1,6 @@
 import fs from 'fs';
+import { describe, expect, it } from '@jest/globals';
+
 import { PDFDocument } from 'src/api';
 import { PDFContext, PDFPageEmbedder, PDFRawStream, PDFRef } from 'src/core';
 

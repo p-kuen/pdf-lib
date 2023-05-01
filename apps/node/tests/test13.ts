@@ -1,4 +1,13 @@
 import fs from 'fs';
+import {
+  describe,
+  expect,
+  beforeAll,
+  jest,
+  beforeEach,
+  afterAll,
+  it,
+} from '@jest/globals';
 
 import { Assets } from '..';
 import { PDFDocument, rgb } from '../../..';

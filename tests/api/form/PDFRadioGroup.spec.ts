@@ -1,10 +1,12 @@
+import { describe, expect, it } from '@jest/globals';
 import fs from 'fs';
+
 import {
-  PDFDocument,
-  PDFName,
-  PDFArray,
-  PDFHexString,
   AnnotationFlags,
+  PDFArray,
+  PDFDocument,
+  PDFHexString,
+  PDFName,
 } from 'src/index';
 
 const fancyFieldsPdfBytes = fs.readFileSync('assets/pdfs/fancy_fields.pdf');

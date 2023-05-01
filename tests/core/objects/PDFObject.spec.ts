@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { MethodNotImplementedError, PDFObject } from 'src/core';
 
 describe(`PDFObject`, () => {

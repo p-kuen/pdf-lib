@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals';
+
 import { svgPathToOperators } from 'src/api/svgPath';
 
 // Test paths adapted from https://svgwg.org/svg2-draft/paths.html
