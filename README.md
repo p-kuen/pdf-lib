@@ -1,3 +1,7 @@
+**Important!** This is a fork of the amazing work of https://www.npmjs.com/package/pdf-lib from [Hopding](https://github.com/Hopding). All credits regarding this package belongs to his package. Unfortunately Andrew does not maintain the package anymore and does not react to any communication tries. This fork was published under my own scope to keep the package maintained as long as the original package does not get maintained.
+
+This repository should only get carefully considered features and bug fixes.
+
 <a href="https://pdf-lib.js.org">
 <h1 align="center">
 <img alt="pdf-lib" height="300" src="https://raw.githubusercontent.com/Hopding/pdf-lib-docs/master/assets/logo-full.svg?sanitize=true">
