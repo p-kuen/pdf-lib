@@ -70,6 +70,7 @@
   "unpkg": "dist/pdf-lib.min.js",
   "types": "es/index.d.ts",
   "type": "module",
+  "exports": "./es/index.js",
   "typesVersions": {
     "<=3.5": {
       "*": [
