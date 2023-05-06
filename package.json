@@ -1,6 +1,6 @@
 {
   "name": "@patcher56/pdf-lib",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "Create and modify PDF files with JavaScript",
   "author": "Andrew Dillon <andrew.dillon.j@gmail.com>",
   "contributors": [
