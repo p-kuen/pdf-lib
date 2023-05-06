@@ -1,5 +1,10 @@
 import { describe, expect, it } from '@jest/globals';
-import { PDFAcroTerminal, PDFContext, PDFRef, PDFArray } from 'src/index';
+import {
+  PDFAcroTerminal,
+  PDFContext,
+  PDFRef,
+  PDFArray,
+} from '../../../src/index.js';
 
 describe(`PDFAcroTerminal`, () => {
   it(`returns Kids when it has them`, () => {

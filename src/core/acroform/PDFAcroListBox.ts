@@ -1,7 +1,7 @@
-import PDFContext from '../../core/PDFContext';
-import PDFAcroChoice from '../../core/acroform/PDFAcroChoice';
-import PDFDict from '../../core/objects/PDFDict';
-import PDFRef from '../../core/objects/PDFRef';
+import PDFContext from '../../core/PDFContext.js';
+import PDFAcroChoice from '../../core/acroform/PDFAcroChoice.js';
+import PDFDict from '../../core/objects/PDFDict.js';
+import PDFRef from '../../core/objects/PDFRef.js';
 
 class PDFAcroListBox extends PDFAcroChoice {
   static fromDict = (dict: PDFDict, ref: PDFRef) =>

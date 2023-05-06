@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { PDFContext, PDFDict, PDFRawStream } from 'src/core';
-import { mergeIntoTypedArray, toCharCode } from 'src/utils';
+import { PDFContext, PDFDict, PDFRawStream } from '../../../src/core/index.js';
+import { mergeIntoTypedArray, toCharCode } from '../../../src/utils/index.js';
 
 describe(`PDFRawStream`, () => {
   const context = PDFContext.create();

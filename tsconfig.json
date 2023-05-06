@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* Basic Options */
     "target": "es2022",
-    "module": "commonjs",
+    "module": "Node16",
     "allowJs": false,
     "checkJs": false,
     "declaration": true,
@@ -36,7 +36,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "preserveSymlinks": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
 
     /* Plugins */
     "plugins": [{ "transform": "@zerollup/ts-transform-paths" }]

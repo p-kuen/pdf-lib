@@ -1,16 +1,16 @@
-import PDFHeader from '../../core/document/PDFHeader';
-import PDFTrailer from '../../core/document/PDFTrailer';
-import PDFInvalidObject from '../../core/objects/PDFInvalidObject';
-import PDFName from '../../core/objects/PDFName';
-import PDFNumber from '../../core/objects/PDFNumber';
-import PDFObject from '../../core/objects/PDFObject';
-import PDFRef from '../../core/objects/PDFRef';
-import PDFStream from '../../core/objects/PDFStream';
-import PDFContext from '../../core/PDFContext';
-import PDFCrossRefStream from '../../core/structures/PDFCrossRefStream';
-import PDFObjectStream from '../../core/structures/PDFObjectStream';
-import PDFWriter from '../../core/writers/PDFWriter';
-import { last, waitForTick } from '../../utils';
+import PDFHeader from '../../core/document/PDFHeader.js';
+import PDFTrailer from '../../core/document/PDFTrailer.js';
+import PDFInvalidObject from '../../core/objects/PDFInvalidObject.js';
+import PDFName from '../../core/objects/PDFName.js';
+import PDFNumber from '../../core/objects/PDFNumber.js';
+import PDFObject from '../../core/objects/PDFObject.js';
+import PDFRef from '../../core/objects/PDFRef.js';
+import PDFStream from '../../core/objects/PDFStream.js';
+import PDFContext from '../../core/PDFContext.js';
+import PDFCrossRefStream from '../../core/structures/PDFCrossRefStream.js';
+import PDFObjectStream from '../../core/structures/PDFObjectStream.js';
+import PDFWriter from '../../core/writers/PDFWriter.js';
+import { last, waitForTick } from '../../utils/index.js';
 
 class PDFStreamWriter extends PDFWriter {
   static forContext = (

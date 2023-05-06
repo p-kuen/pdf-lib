@@ -1,5 +1,5 @@
-import PDFDict from '../../core/objects/PDFDict';
-import CharCodes from '../../core/syntax/CharCodes';
+import PDFDict from '../../core/objects/PDFDict.js';
+import CharCodes from '../../core/syntax/CharCodes.js';
 
 class PDFTrailerDict {
   static of = (dict: PDFDict) => new PDFTrailerDict(dict);

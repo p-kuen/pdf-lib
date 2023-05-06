@@ -2,8 +2,8 @@ import fontkit, { Font, Glyph } from '@pdf-lib/fontkit';
 import fs from 'fs';
 import { describe, expect, it } from '@jest/globals';
 
-import { createCmap } from 'src/core/embedders/CMap';
-import { byAscendingId, sortedUniq } from 'src/utils';
+import { createCmap } from '../../../src/core/embedders/CMap.js';
+import { byAscendingId, sortedUniq } from '../../../src/utils/index.js';
 
 const ubuntuFont = fs.readFileSync('./assets/fonts/ubuntu/Ubuntu-R.ttf');
 const sourceHansJpFont = fs.readFileSync(

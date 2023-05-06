@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { PDFString } from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+import { PDFString } from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFString`, () => {
   it(`can be constructed from PDFString.of(...)`, () => {

@@ -1,6 +1,6 @@
-import CharCodes from '../../core/syntax/CharCodes';
-import { IsDelimiter } from '../../core/syntax/Delimiters';
-import { IsWhitespace } from '../../core/syntax/Whitespace';
+import CharCodes from '../../core/syntax/CharCodes.js';
+import { IsDelimiter } from '../../core/syntax/Delimiters.js';
+import { IsWhitespace } from '../../core/syntax/Whitespace.js';
 
 export const IsIrregular = new Uint8Array(256);
 

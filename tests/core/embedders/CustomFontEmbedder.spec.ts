@@ -8,7 +8,7 @@ import {
   PDFDict,
   PDFHexString,
   PDFRef,
-} from 'src/index';
+} from '../../../src/index.js';
 
 const ubuntuFont = fs.readFileSync('./assets/fonts/ubuntu/Ubuntu-R.ttf');
 

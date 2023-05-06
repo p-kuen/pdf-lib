@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
-import { PDFHeader } from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+import { PDFHeader } from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFHeader`, () => {
   it(`can be constructed from PDFHeader.forVersion(...)`, () => {

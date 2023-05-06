@@ -1,8 +1,8 @@
-import PDFContext from '../../core/PDFContext';
-import PDFAcroChoice from '../../core/acroform/PDFAcroChoice';
-import { AcroChoiceFlags } from '../../core/acroform/flags';
-import PDFDict from '../../core/objects/PDFDict';
-import PDFRef from '../../core/objects/PDFRef';
+import PDFContext from '../../core/PDFContext.js';
+import PDFAcroChoice from '../../core/acroform/PDFAcroChoice.js';
+import { AcroChoiceFlags } from '../../core/acroform/flags.js';
+import PDFDict from '../../core/objects/PDFDict.js';
+import PDFRef from '../../core/objects/PDFRef.js';
 
 class PDFAcroComboBox extends PDFAcroChoice {
   static fromDict = (dict: PDFDict, ref: PDFRef) =>

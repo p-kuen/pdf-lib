@@ -1,8 +1,8 @@
 import fs from 'fs';
 import { describe, expect, it } from '@jest/globals';
 
-import Ascii85Stream from 'src/core/streams/Ascii85Stream';
-import Stream from 'src/core/streams/Stream';
+import Ascii85Stream from '../../../src/core/streams/Ascii85Stream.js';
+import Stream from '../../../src/core/streams/Stream.js';
 
 const DIR = `tests/core/streams/data/ascii85`;
 const FILES = ['1'];

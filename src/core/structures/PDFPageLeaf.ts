@@ -1,12 +1,12 @@
-import PDFArray from '../../core/objects/PDFArray';
-import PDFDict, { DictMap } from '../../core/objects/PDFDict';
-import PDFName from '../../core/objects/PDFName';
-import PDFNumber from '../../core/objects/PDFNumber';
-import PDFObject from '../../core/objects/PDFObject';
-import PDFRef from '../../core/objects/PDFRef';
-import PDFStream from '../../core/objects/PDFStream';
-import PDFContext from '../../core/PDFContext';
-import PDFPageTree from '../../core/structures/PDFPageTree';
+import PDFArray from '../../core/objects/PDFArray.js';
+import PDFDict, { DictMap } from '../../core/objects/PDFDict.js';
+import PDFName from '../../core/objects/PDFName.js';
+import PDFNumber from '../../core/objects/PDFNumber.js';
+import PDFObject from '../../core/objects/PDFObject.js';
+import PDFRef from '../../core/objects/PDFRef.js';
+import PDFStream from '../../core/objects/PDFStream.js';
+import PDFContext from '../../core/PDFContext.js';
+import PDFPageTree from '../../core/structures/PDFPageTree.js';
 
 class PDFPageLeaf extends PDFDict {
   static readonly InheritableEntries = [

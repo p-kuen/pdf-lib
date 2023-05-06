@@ -1,6 +1,9 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { MethodNotImplementedError, PDFObject } from 'src/core';
+import {
+  MethodNotImplementedError,
+  PDFObject,
+} from '../../../src/core/index.js';
 
 describe(`PDFObject`, () => {
   const pdfObject = new PDFObject();

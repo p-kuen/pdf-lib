@@ -1,4 +1,4 @@
-import { toCharCode } from '../utils/strings';
+import { toCharCode } from '../utils/strings.js';
 
 // Mapping from PDFDocEncoding to Unicode code point
 const pdfDocEncodingToUnicode = new Uint16Array(256);

@@ -1,8 +1,8 @@
 import fs from 'fs';
 import { describe, expect, it } from '@jest/globals';
 
-import AsciiHexStream from 'src/core/streams/AsciiHexStream';
-import Stream from 'src/core/streams/Stream';
+import AsciiHexStream from '../../../src/core/streams/AsciiHexStream.js';
+import Stream from '../../../src/core/streams/Stream.js';
 
 const DIR = `tests/core/streams/data/asciihex`;
 const FILES = ['1', '2'];

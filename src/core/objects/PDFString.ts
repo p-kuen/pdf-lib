@@ -1,6 +1,6 @@
-import { InvalidPDFDateStringError } from '../../core/errors';
-import PDFObject from '../../core/objects/PDFObject';
-import CharCodes from '../../core/syntax/CharCodes';
+import { InvalidPDFDateStringError } from '../../core/errors.js';
+import PDFObject from '../../core/objects/PDFObject.js';
+import CharCodes from '../../core/syntax/CharCodes.js';
 import {
   copyStringIntoBuffer,
   hasUtf16BOM,
@@ -9,7 +9,7 @@ import {
   pdfDocEncodingDecode,
   toCharCode,
   utf16Decode,
-} from '../../utils';
+} from '../../utils/index.js';
 
 class PDFString extends PDFObject {
   // The PDF spec allows newlines and parens to appear directly within a literal

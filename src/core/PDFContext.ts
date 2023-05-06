@@ -1,24 +1,24 @@
 import pako from 'pako';
 
-import PDFHeader from '../core/document/PDFHeader';
-import { UnexpectedObjectTypeError } from '../core/errors';
-import PDFArray from '../core/objects/PDFArray';
-import PDFBool from '../core/objects/PDFBool';
-import PDFDict from '../core/objects/PDFDict';
-import PDFHexString from '../core/objects/PDFHexString';
-import PDFName from '../core/objects/PDFName';
-import PDFNull from '../core/objects/PDFNull';
-import PDFNumber from '../core/objects/PDFNumber';
-import PDFObject from '../core/objects/PDFObject';
-import PDFRawStream from '../core/objects/PDFRawStream';
-import PDFRef from '../core/objects/PDFRef';
-import PDFStream from '../core/objects/PDFStream';
-import PDFString from '../core/objects/PDFString';
-import PDFOperator from '../core/operators/PDFOperator';
-import Ops from '../core/operators/PDFOperatorNames';
-import PDFContentStream from '../core/structures/PDFContentStream';
-import { typedArrayFor } from '../utils';
-import { SimpleRNG } from '../utils/rng';
+import PDFHeader from '../core/document/PDFHeader.js';
+import { UnexpectedObjectTypeError } from '../core/errors.js';
+import PDFArray from '../core/objects/PDFArray.js';
+import PDFBool from '../core/objects/PDFBool.js';
+import PDFDict from '../core/objects/PDFDict.js';
+import PDFHexString from '../core/objects/PDFHexString.js';
+import PDFName from '../core/objects/PDFName.js';
+import PDFNull from '../core/objects/PDFNull.js';
+import PDFNumber from '../core/objects/PDFNumber.js';
+import PDFObject from '../core/objects/PDFObject.js';
+import PDFRawStream from '../core/objects/PDFRawStream.js';
+import PDFRef from '../core/objects/PDFRef.js';
+import PDFStream from '../core/objects/PDFStream.js';
+import PDFString from '../core/objects/PDFString.js';
+import PDFOperator from '../core/operators/PDFOperator.js';
+import Ops from '../core/operators/PDFOperatorNames.js';
+import PDFContentStream from '../core/structures/PDFContentStream.js';
+import { typedArrayFor } from '../utils/index.js';
+import { SimpleRNG } from '../utils/rng.js';
 
 type LookupKey = PDFRef | PDFObject | undefined;
 

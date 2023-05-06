@@ -1,9 +1,9 @@
-import PDFArray from '../../core/objects/PDFArray';
-import PDFDict from '../../core/objects/PDFDict';
-import PDFHexString from '../../core/objects/PDFHexString';
-import PDFName from '../../core/objects/PDFName';
-import PDFNumber from '../../core/objects/PDFNumber';
-import PDFString from '../../core/objects/PDFString';
+import PDFArray from '../../core/objects/PDFArray.js';
+import PDFDict from '../../core/objects/PDFDict.js';
+import PDFHexString from '../../core/objects/PDFHexString.js';
+import PDFName from '../../core/objects/PDFName.js';
+import PDFNumber from '../../core/objects/PDFNumber.js';
+import PDFString from '../../core/objects/PDFString.js';
 
 class AppearanceCharacteristics {
   readonly dict: PDFDict;

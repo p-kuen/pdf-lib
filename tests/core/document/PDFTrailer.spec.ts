@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
-import { PDFTrailer } from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+import { PDFTrailer } from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFTrailer`, () => {
   it(`can be constructed from PDFTrailer.forLastCrossRefSectionOffset(...)`, () => {

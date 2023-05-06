@@ -7,7 +7,7 @@ import {
   PDFDocument,
   PDFHexString,
   PDFName,
-} from 'src/index';
+} from '../../../src/index.js';
 
 const fancyFieldsPdfBytes = fs.readFileSync('assets/pdfs/fancy_fields.pdf');
 

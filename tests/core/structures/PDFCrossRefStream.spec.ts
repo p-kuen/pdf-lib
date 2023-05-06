@@ -7,7 +7,7 @@ import {
   PDFCrossRefStream,
   PDFRef,
   toCharCode,
-} from 'src/index';
+} from '../../../src/index.js';
 
 describe(`PDFCrossRefStream`, () => {
   const context = PDFContext.create();

@@ -1,7 +1,7 @@
-import PDFFont from '../api/PDFFont';
-import { Color } from '../api/colors';
-import { LineCapStyle } from '../api/operators';
-import { Rotation } from '../api/rotations';
+import PDFFont from '../api/PDFFont.js';
+import { Color } from '../api/colors.js';
+import { LineCapStyle } from '../api/operators.js';
+import { Rotation } from '../api/rotations.js';
 
 export enum BlendMode {
   Normal = 'Normal',

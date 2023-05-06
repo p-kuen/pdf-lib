@@ -1,8 +1,8 @@
 import fs from 'fs';
 import { describe, expect, it } from '@jest/globals';
 
-import RunLengthStream from 'src/core/streams/RunLengthStream';
-import Stream from 'src/core/streams/Stream';
+import RunLengthStream from '../../../src/core/streams/RunLengthStream.js';
+import Stream from '../../../src/core/streams/Stream.js';
 
 const DIR = `tests/core/streams/data/runlength`;
 const FILES = ['1', '2', '3', '4', '5'];

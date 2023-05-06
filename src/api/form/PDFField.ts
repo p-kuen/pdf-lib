@@ -1,7 +1,7 @@
-import PDFDocument from '../../api/PDFDocument';
-import PDFFont from '../../api/PDFFont';
-import { Color, colorToComponents, setFillingColor } from '../../api/colors';
-import { AppearanceMapping } from '../../api/form/appearances';
+import PDFDocument from '../../api/PDFDocument.js';
+import PDFFont from '../../api/PDFFont.js';
+import { Color, colorToComponents, setFillingColor } from '../../api/colors.js';
+import { AppearanceMapping } from '../../api/form/appearances.js';
 import {
   Rotation,
   adjustDimsForRotation,
@@ -9,7 +9,7 @@ import {
   reduceRotation,
   rotateRectangle,
   toDegrees,
-} from '../../api/rotations';
+} from '../../api/rotations.js';
 
 import {
   AcroFieldFlags,
@@ -21,11 +21,15 @@ import {
   PDFOperator,
   PDFRef,
   PDFWidgetAnnotation,
-} from '../../core';
-import { assertIs, assertMultiple, assertOrUndefined } from '../../utils';
-import PDFImage from '../PDFImage';
-import { ImageAlignment } from '../image';
-import { drawImage, rotateInPlace } from '../operations';
+} from '../../core/index.js';
+import {
+  assertIs,
+  assertMultiple,
+  assertOrUndefined,
+} from '../../utils/index.js';
+import PDFImage from '../PDFImage.js';
+import { ImageAlignment } from '../image/index.js';
+import { drawImage, rotateInPlace } from '../operations.js';
 
 export interface FieldAppearanceOptions {
   x?: number;

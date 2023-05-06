@@ -1,7 +1,7 @@
-import PDFDict from '../../core/objects/PDFDict';
-import PDFStream from '../../core/objects/PDFStream';
-import PDFContext from '../../core/PDFContext';
-import { arrayAsString } from '../../utils';
+import PDFDict from '../../core/objects/PDFDict.js';
+import PDFStream from '../../core/objects/PDFStream.js';
+import PDFContext from '../../core/PDFContext.js';
+import { arrayAsString } from '../../utils/index.js';
 
 class PDFRawStream extends PDFStream {
   static of = (dict: PDFDict, contents: Uint8Array) =>

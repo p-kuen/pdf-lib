@@ -7,7 +7,7 @@ import {
   PDFHexString,
   PDFRef,
   StandardFontEmbedder,
-} from 'src/index';
+} from '../../../src/index.js';
 
 describe(`StandardFontEmbedder`, () => {
   it(`can be constructed with StandardFontEmbedder.for(...)`, () => {

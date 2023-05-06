@@ -48,7 +48,7 @@
     "lint:prettier": "prettier --write \"./{src,tests,apps}/**/*.{ts,js,json,html,css}\" --loglevel error",
     "build": "yarn build:cjs && yarn build:es && yarn build:esm && yarn build:esm:min && yarn build:umd && yarn build:umd:min && yarn build:downlevel-dts",
     "build:cjs": "tsc --module commonjs --outDir cjs",
-    "build:es": "tsc --module ES2015 --outDir es",
+    "build:es": "tsc --module ES2022 --outDir es",
     "build:esm": "rollup --config rollup.config.mjs --file dist/pdf-lib.esm.js --environment MODULE_TYPE:es",
     "build:esm:min": "rollup --config rollup.config.mjs --file dist/pdf-lib.esm.min.js --environment MINIFY,MODULE_TYPE:es",
     "build:umd": "rollup --config rollup.config.mjs --file dist/pdf-lib.js --environment MODULE_TYPE:umd",
@@ -68,7 +68,8 @@
   "main": "cjs/index.js",
   "module": "es/index.js",
   "unpkg": "dist/pdf-lib.min.js",
-  "types": "cjs/index.d.ts",
+  "types": "es/index.d.ts",
+  "type": "module",
   "typesVersions": {
     "<=3.5": {
       "*": [

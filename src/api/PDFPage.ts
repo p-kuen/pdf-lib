@@ -1,4 +1,4 @@
-import { Color, rgb } from '../api/colors';
+import { Color, rgb } from '../api/colors.js';
 import {
   drawEllipse,
   drawImage,
@@ -7,18 +7,18 @@ import {
   drawPage,
   drawRectangle,
   drawSvgPath,
-} from '../api/operations';
+} from '../api/operations.js';
 import {
   LineCapStyle,
   popGraphicsState,
   pushGraphicsState,
   scale,
   translate,
-} from '../api/operators';
-import PDFDocument from '../api/PDFDocument';
-import PDFEmbeddedPage from '../api/PDFEmbeddedPage';
-import PDFFont from '../api/PDFFont';
-import PDFImage from '../api/PDFImage';
+} from '../api/operators.js';
+import PDFDocument from '../api/PDFDocument.js';
+import PDFEmbeddedPage from '../api/PDFEmbeddedPage.js';
+import PDFFont from '../api/PDFFont.js';
+import PDFImage from '../api/PDFImage.js';
 import {
   BlendMode,
   PDFPageDrawCircleOptions,
@@ -30,9 +30,9 @@ import {
   PDFPageDrawSquareOptions,
   PDFPageDrawSVGOptions,
   PDFPageDrawTextOptions,
-} from '../api/PDFPageOptions';
-import { degrees, Rotation, toDegrees } from '../api/rotations';
-import { StandardFonts } from '../api/StandardFonts';
+} from '../api/PDFPageOptions.js';
+import { degrees, Rotation, toDegrees } from '../api/rotations.js';
+import { StandardFonts } from '../api/StandardFonts.js';
 import {
   PDFArray,
   PDFContentStream,
@@ -42,7 +42,7 @@ import {
   PDFOperator,
   PDFPageLeaf,
   PDFRef,
-} from '../core';
+} from '../core/index.js';
 import {
   assertEachIs,
   assertIs,
@@ -54,7 +54,7 @@ import {
   cleanText,
   lineSplit,
   rectanglesAreEqual,
-} from '../utils';
+} from '../utils/index.js';
 
 /**
  * Represents a single page of a [[PDFDocument]].

@@ -1,15 +1,15 @@
-import PDFArray from '../../core/objects/PDFArray';
-import PDFBool from '../../core/objects/PDFBool';
-import PDFHexString from '../../core/objects/PDFHexString';
-import PDFName from '../../core/objects/PDFName';
-import PDFNull from '../../core/objects/PDFNull';
-import PDFNumber from '../../core/objects/PDFNumber';
-import PDFObject from '../../core/objects/PDFObject';
-import PDFRef from '../../core/objects/PDFRef';
-import PDFStream from '../../core/objects/PDFStream';
-import PDFString from '../../core/objects/PDFString';
-import PDFContext from '../../core/PDFContext';
-import CharCodes from '../../core/syntax/CharCodes';
+import PDFArray from '../../core/objects/PDFArray.js';
+import PDFBool from '../../core/objects/PDFBool.js';
+import PDFHexString from '../../core/objects/PDFHexString.js';
+import PDFName from '../../core/objects/PDFName.js';
+import PDFNull from '../../core/objects/PDFNull.js';
+import PDFNumber from '../../core/objects/PDFNumber.js';
+import PDFObject from '../../core/objects/PDFObject.js';
+import PDFRef from '../../core/objects/PDFRef.js';
+import PDFStream from '../../core/objects/PDFStream.js';
+import PDFString from '../../core/objects/PDFString.js';
+import PDFContext from '../../core/PDFContext.js';
+import CharCodes from '../../core/syntax/CharCodes.js';
 
 export type DictMap = Map<PDFName, PDFObject>;
 

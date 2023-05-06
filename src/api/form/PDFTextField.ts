@@ -1,25 +1,25 @@
-import PDFDocument from '../../api/PDFDocument';
-import PDFFont from '../../api/PDFFont';
-import PDFImage from '../../api/PDFImage';
-import PDFPage from '../../api/PDFPage';
-import { rgb } from '../../api/colors';
+import PDFDocument from '../../api/PDFDocument.js';
+import PDFFont from '../../api/PDFFont.js';
+import PDFImage from '../../api/PDFImage.js';
+import PDFPage from '../../api/PDFPage.js';
+import { rgb } from '../../api/colors.js';
 import {
   ExceededMaxLengthError,
   InvalidMaxLengthError,
   RichTextFieldReadError,
-} from '../../api/errors';
+} from '../../api/errors.js';
 import PDFField, {
   FieldAppearanceOptions,
   assertFieldAppearanceOptions,
-} from '../../api/form/PDFField';
+} from '../../api/form/PDFField.js';
 import {
   AppearanceProviderFor,
   defaultTextFieldAppearanceProvider,
   normalizeAppearance,
-} from '../../api/form/appearances';
-import { ImageAlignment } from '../../api/image/alignment';
-import { degrees } from '../../api/rotations';
-import { TextAlignment } from '../../api/text/alignment';
+} from '../../api/form/appearances.js';
+import { ImageAlignment } from '../../api/image/alignment.js';
+import { degrees } from '../../api/rotations.js';
+import { TextAlignment } from '../../api/text/alignment.js';
 
 import {
   AcroTextFlags,
@@ -28,14 +28,14 @@ import {
   PDFRef,
   PDFStream,
   PDFWidgetAnnotation,
-} from '../../core';
+} from '../../core/index.js';
 import {
   assertIs,
   assertIsOneOf,
   assertOrUndefined,
   assertPositive,
   assertRangeOrUndefined,
-} from '../../utils';
+} from '../../utils/index.js';
 
 /**
  * Represents a text field of a [[PDFForm]].

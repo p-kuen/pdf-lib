@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { PDFNull } from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+import { PDFNull } from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFNull`, () => {
   it(`cannot be publicly constructed`, () => {

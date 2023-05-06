@@ -4,7 +4,7 @@ import {
   utf16Decode,
   utf16Encode,
   utf8Encode,
-} from 'src/utils';
+} from '../../src/utils/index.js';
 
 const utf8BOM = new Uint8Array([0xef, 0xbb, 0xbf]);
 const utf16BOM = new Uint16Array([0xfeff]);

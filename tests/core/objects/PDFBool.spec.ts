@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { PDFBool, PrivateConstructorError } from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+import { PDFBool, PrivateConstructorError } from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFBool`, () => {
   it(`cannot be publicly constructed`, () => {

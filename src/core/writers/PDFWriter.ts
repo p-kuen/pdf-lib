@@ -1,14 +1,14 @@
-import PDFCrossRefSection from '../../core/document/PDFCrossRefSection';
-import PDFHeader from '../../core/document/PDFHeader';
-import PDFTrailer from '../../core/document/PDFTrailer';
-import PDFTrailerDict from '../../core/document/PDFTrailerDict';
-import PDFDict from '../../core/objects/PDFDict';
-import PDFObject from '../../core/objects/PDFObject';
-import PDFRef from '../../core/objects/PDFRef';
-import PDFContext from '../../core/PDFContext';
-import PDFObjectStream from '../../core/structures/PDFObjectStream';
-import CharCodes from '../../core/syntax/CharCodes';
-import { copyStringIntoBuffer, waitForTick } from '../../utils';
+import PDFCrossRefSection from '../../core/document/PDFCrossRefSection.js';
+import PDFHeader from '../../core/document/PDFHeader.js';
+import PDFTrailer from '../../core/document/PDFTrailer.js';
+import PDFTrailerDict from '../../core/document/PDFTrailerDict.js';
+import PDFDict from '../../core/objects/PDFDict.js';
+import PDFObject from '../../core/objects/PDFObject.js';
+import PDFRef from '../../core/objects/PDFRef.js';
+import PDFContext from '../../core/PDFContext.js';
+import PDFObjectStream from '../../core/structures/PDFObjectStream.js';
+import CharCodes from '../../core/syntax/CharCodes.js';
+import { copyStringIntoBuffer, waitForTick } from '../../utils/index.js';
 
 export interface SerializationInfo {
   size: number;

@@ -21,7 +21,7 @@ import {
   PDFString,
   ReparseError,
   typedArrayFor,
-} from 'src/index';
+} from '../../../src/index.js';
 
 describe(`PDFParser`, () => {
   const origConsoleWarn = console.warn;

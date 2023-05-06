@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { PDFHexString } from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+import { PDFHexString } from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFHexString`, () => {
   it(`can be constructed from PDFHexString.of(...)`, () => {

@@ -1,5 +1,5 @@
-import { MethodNotImplementedError } from '../../core/errors';
-import PDFContext from '../../core/PDFContext';
+import { MethodNotImplementedError } from '../../core/errors.js';
+import PDFContext from '../../core/PDFContext.js';
 
 class PDFObject {
   clone(_context?: PDFContext): PDFObject {

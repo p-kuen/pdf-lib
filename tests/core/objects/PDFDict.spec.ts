@@ -12,8 +12,8 @@ import {
   PDFRef,
   PDFString,
   PDFObject,
-} from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+} from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFDict`, () => {
   const context = PDFContext.create();

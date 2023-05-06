@@ -1,28 +1,28 @@
-import PDFDocument from '../../api/PDFDocument';
-import PDFFont from '../../api/PDFFont';
-import PDFPage from '../../api/PDFPage';
-import { StandardFonts } from '../../api/StandardFonts';
+import PDFDocument from '../../api/PDFDocument.js';
+import PDFFont from '../../api/PDFFont.js';
+import PDFPage from '../../api/PDFPage.js';
+import { StandardFonts } from '../../api/StandardFonts.js';
 import {
   FieldAlreadyExistsError,
   InvalidFieldNamePartError,
   NoSuchFieldError,
   UnexpectedFieldTypeError,
-} from '../../api/errors';
-import PDFButton from '../../api/form/PDFButton';
-import PDFCheckBox from '../../api/form/PDFCheckBox';
-import PDFDropdown from '../../api/form/PDFDropdown';
-import PDFField from '../../api/form/PDFField';
-import PDFOptionList from '../../api/form/PDFOptionList';
-import PDFRadioGroup from '../../api/form/PDFRadioGroup';
-import PDFSignature from '../../api/form/PDFSignature';
-import PDFTextField from '../../api/form/PDFTextField';
-import { rotateInPlace } from '../../api/operations';
+} from '../../api/errors.js';
+import PDFButton from '../../api/form/PDFButton.js';
+import PDFCheckBox from '../../api/form/PDFCheckBox.js';
+import PDFDropdown from '../../api/form/PDFDropdown.js';
+import PDFField from '../../api/form/PDFField.js';
+import PDFOptionList from '../../api/form/PDFOptionList.js';
+import PDFRadioGroup from '../../api/form/PDFRadioGroup.js';
+import PDFSignature from '../../api/form/PDFSignature.js';
+import PDFTextField from '../../api/form/PDFTextField.js';
+import { rotateInPlace } from '../../api/operations.js';
 import {
   drawObject,
   popGraphicsState,
   pushGraphicsState,
   translate,
-} from '../../api/operators';
+} from '../../api/operators.js';
 import {
   PDFAcroCheckBox,
   PDFAcroComboBox,
@@ -40,8 +40,8 @@ import {
   PDFRef,
   PDFWidgetAnnotation,
   createPDFAcroFields,
-} from '../../core';
-import { Cache, assertIs, assertOrUndefined } from '../../utils';
+} from '../../core/index.js';
+import { Cache, assertIs, assertOrUndefined } from '../../utils/index.js';
 
 export interface FlattenOptions {
   updateFieldAppearances: boolean;

@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { PDFInvalidObject } from 'src/core';
+import { PDFInvalidObject } from '../../../src/core/index.js';
 
 describe(`PDFInvalidObject`, () => {
   const data = new Uint8Array([12, 39, 92, 38, 38, 28, 49]);

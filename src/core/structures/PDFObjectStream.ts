@@ -1,11 +1,11 @@
-import PDFName from '../../core/objects/PDFName';
-import PDFNumber from '../../core/objects/PDFNumber';
-import PDFObject from '../../core/objects/PDFObject';
-import PDFRef from '../../core/objects/PDFRef';
-import PDFContext from '../../core/PDFContext';
-import PDFFlateStream from '../../core/structures/PDFFlateStream';
-import CharCodes from '../../core/syntax/CharCodes';
-import { copyStringIntoBuffer, last } from '../../utils';
+import PDFName from '../../core/objects/PDFName.js';
+import PDFNumber from '../../core/objects/PDFNumber.js';
+import PDFObject from '../../core/objects/PDFObject.js';
+import PDFRef from '../../core/objects/PDFRef.js';
+import PDFContext from '../../core/PDFContext.js';
+import PDFFlateStream from '../../core/structures/PDFFlateStream.js';
+import CharCodes from '../../core/syntax/CharCodes.js';
+import { copyStringIntoBuffer, last } from '../../utils/index.js';
 
 export type IndirectObject = [PDFRef, PDFObject];
 

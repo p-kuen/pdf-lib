@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 import fs from 'fs';
 
-import { TreeNode } from 'src/core/structures/PDFPageTree';
+import { TreeNode } from 'src/core/structures/PDFPageTree.js';
 import {
   PDFArray,
   PDFContext,
@@ -11,7 +11,7 @@ import {
   PDFPageLeaf,
   PDFPageTree,
   PDFRef,
-} from 'src/index';
+} from '../../../src/index.js';
 
 const withNullEntryPdfBytes = fs.readFileSync(
   'assets/pdfs/with_null_parent_entry.pdf',

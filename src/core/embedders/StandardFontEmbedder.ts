@@ -5,10 +5,10 @@ import {
   FontNames,
 } from '@pdf-lib/standard-fonts';
 
-import PDFHexString from '../../core/objects/PDFHexString';
-import PDFRef from '../../core/objects/PDFRef';
-import PDFContext from '../../core/PDFContext';
-import { toCodePoint, toHexString } from '../../utils';
+import PDFHexString from '../../core/objects/PDFHexString.js';
+import PDFRef from '../../core/objects/PDFRef.js';
+import PDFContext from '../../core/PDFContext.js';
+import { toCodePoint, toHexString } from '../../utils/index.js';
 
 export interface Glyph {
   code: number;

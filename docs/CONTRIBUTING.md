@@ -201,7 +201,7 @@ For most development, manual compilation isn't necessary. The scratchpad and uni
 Compiling the project will produce 4 artifacts:
 
 - **`compiled/cjs`** - a directory containing a CommonJS version of the project (uses `require` instead of `import`). This folder contains `.js` and [`.d.ts`](https://stackoverflow.com/a/21247316) files, rather than the `.ts` files that the project source is written in.
-- **`compiled/es`** - a directory containing an ES2015 version of the project (uses `import` instead of `require`). This folder contains `.js` and [`.d.ts`](https://stackoverflow.com/a/21247316) files, rather than the `.ts` files that the project source is written in.
+- **`compiled/es`** - a directory containing an ES2022 version of the project (uses `import` instead of `require`). This folder contains `.js` and [`.d.ts`](https://stackoverflow.com/a/21247316) files, rather than the `.ts` files that the project source is written in.
 - **`compiled/dist/pdf-lib.js`** - a single JavaScript file containing a [UMD](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) version of the project.
 - **`compiled/dist/pdf-lib.min.js`** - a single JavaScript file containing a minified [UMD](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) version of the project.
 

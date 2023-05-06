@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
-import { PDFContext, PDFTrailerDict } from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+import { PDFContext, PDFTrailerDict } from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFTrailerDict`, () => {
   const dict = PDFContext.create().obj({ Foo: 'Bar' });

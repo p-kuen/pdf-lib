@@ -1,4 +1,4 @@
-import Embeddable from '../api/Embeddable';
+import Embeddable from '../api/Embeddable.js';
 import {
   AttachmentOptions,
   Base64SaveOptions,
@@ -8,22 +8,22 @@ import {
   ParseSpeeds,
   SaveOptions,
   SetTitleOptions,
-} from '../api/PDFDocumentOptions';
-import PDFEmbeddedFile from '../api/PDFEmbeddedFile';
-import PDFEmbeddedPage from '../api/PDFEmbeddedPage';
-import PDFFont from '../api/PDFFont';
-import PDFImage from '../api/PDFImage';
-import PDFJavaScript from '../api/PDFJavaScript';
-import PDFPage from '../api/PDFPage';
-import { StandardFonts } from '../api/StandardFonts';
+} from '../api/PDFDocumentOptions.js';
+import PDFEmbeddedFile from '../api/PDFEmbeddedFile.js';
+import PDFEmbeddedPage from '../api/PDFEmbeddedPage.js';
+import PDFFont from '../api/PDFFont.js';
+import PDFImage from '../api/PDFImage.js';
+import PDFJavaScript from '../api/PDFJavaScript.js';
+import PDFPage from '../api/PDFPage.js';
+import { StandardFonts } from '../api/StandardFonts.js';
 import {
   EncryptedPDFError,
   FontkitNotRegisteredError,
   ForeignPageError,
   RemovePageFromEmptyDocumentError,
-} from '../api/errors';
-import PDFForm from '../api/form/PDFForm';
-import { PageSizes } from '../api/sizes';
+} from '../api/errors.js';
+import PDFForm from '../api/form/PDFForm.js';
+import { PageSizes } from '../api/sizes.js';
 import {
   CustomFontEmbedder,
   CustomFontSubsetEmbedder,
@@ -46,13 +46,15 @@ import {
   PngEmbedder,
   StandardFontEmbedder,
   UnexpectedObjectTypeError,
-} from '../core';
-import FileEmbedder, { AFRelationship } from '../core/embedders/FileEmbedder';
-import JavaScriptEmbedder from '../core/embedders/JavaScriptEmbedder';
-import PDFObject from '../core/objects/PDFObject';
-import PDFRef from '../core/objects/PDFRef';
-import { Fontkit } from '../types/fontkit';
-import { TransformationMatrix } from '../types/matrix';
+} from '../core/index.js';
+import FileEmbedder, {
+  AFRelationship,
+} from '../core/embedders/FileEmbedder.js';
+import JavaScriptEmbedder from '../core/embedders/JavaScriptEmbedder.js';
+import PDFObject from '../core/objects/PDFObject.js';
+import PDFRef from '../core/objects/PDFRef.js';
+import { Fontkit } from '../types/fontkit.js';
+import { TransformationMatrix } from '../types/matrix.js';
 import {
   Cache,
   assertIs,
@@ -65,7 +67,7 @@ import {
   pluckIndices,
   range,
   toUint8Array,
-} from '../utils';
+} from '../utils/index.js';
 
 /**
  * Represents a PDF document.

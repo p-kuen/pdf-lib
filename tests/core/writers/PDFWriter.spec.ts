@@ -8,7 +8,7 @@ import {
   PDFRef,
   PDFWriter,
   typedArrayFor,
-} from 'src/index';
+} from '../../../src/index.js';
 
 const contentStreamText = `
   BT

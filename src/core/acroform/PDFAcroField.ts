@@ -1,13 +1,16 @@
-import { MissingDAEntryError, MissingTfOperatorError } from '../../core/errors';
-import PDFArray from '../../core/objects/PDFArray';
-import PDFDict from '../../core/objects/PDFDict';
-import PDFHexString from '../../core/objects/PDFHexString';
-import PDFName from '../../core/objects/PDFName';
-import PDFNumber from '../../core/objects/PDFNumber';
-import PDFObject from '../../core/objects/PDFObject';
-import PDFRef from '../../core/objects/PDFRef';
-import PDFString from '../../core/objects/PDFString';
-import { findLastMatch } from '../../utils';
+import {
+  MissingDAEntryError,
+  MissingTfOperatorError,
+} from '../../core/errors.js';
+import PDFArray from '../../core/objects/PDFArray.js';
+import PDFDict from '../../core/objects/PDFDict.js';
+import PDFHexString from '../../core/objects/PDFHexString.js';
+import PDFName from '../../core/objects/PDFName.js';
+import PDFNumber from '../../core/objects/PDFNumber.js';
+import PDFObject from '../../core/objects/PDFObject.js';
+import PDFRef from '../../core/objects/PDFRef.js';
+import PDFString from '../../core/objects/PDFString.js';
+import { findLastMatch } from '../../utils/index.js';
 
 // Examples:
 //   `/Helv 12 Tf` -> ['Helv', '12']

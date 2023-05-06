@@ -23,7 +23,7 @@ import {
   PDFRef,
   PDFTextField,
   PDFWidgetAnnotation,
-} from 'src/index';
+} from '../../../src/index.js';
 
 const getWidgets = (pdfDoc: PDFDocument) =>
   pdfDoc.context

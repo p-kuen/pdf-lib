@@ -1,7 +1,12 @@
 import fs from 'fs';
 import { describe, expect, it } from '@jest/globals';
 
-import { PDFContext, PDFRawStream, PDFRef, PngEmbedder } from 'src/core';
+import {
+  PDFContext,
+  PDFRawStream,
+  PDFRef,
+  PngEmbedder,
+} from '../../../src/core/index.js';
 
 const greyscalePng = fs.readFileSync('./assets/images/greyscale_bird.png');
 const rgbaPng = fs.readFileSync('./assets/images/minions_banana_alpha.png');

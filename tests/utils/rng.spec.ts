@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { SimpleRNG } from 'src/utils/rng';
+import { SimpleRNG } from '../../src/utils/rng.js';
 
 describe(`psuedo random numbers`, () => {
   it(`generates distinct numbers`, () => {

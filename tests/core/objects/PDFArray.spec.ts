@@ -11,8 +11,8 @@ import {
   PDFNumber,
   PDFRef,
   PDFString,
-} from 'src/core';
-import { toCharCode, typedArrayFor } from 'src/utils';
+} from '../../../src/core/index.js';
+import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 
 describe(`PDFArray`, () => {
   const context = PDFContext.create();

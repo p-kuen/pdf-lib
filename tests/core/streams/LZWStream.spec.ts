@@ -1,8 +1,8 @@
 import fs from 'fs';
 import { describe, expect, it } from '@jest/globals';
 
-import LZWStream from 'src/core/streams/LZWStream';
-import Stream from 'src/core/streams/Stream';
+import LZWStream from '../../../src/core/streams/LZWStream.js';
+import Stream from '../../../src/core/streams/Stream.js';
 
 const DIR = `tests/core/streams/data/lzw`;
 const FILES = ['1', '2', '3', '4'];

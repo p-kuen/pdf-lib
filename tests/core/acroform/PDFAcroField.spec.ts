@@ -4,7 +4,7 @@ import {
   PDFContext,
   PDFString,
   PDFHexString,
-} from 'src/index';
+} from '../../../src/index.js';
 
 describe(`PDFAcroField`, () => {
   it(`returns undefined for missing (DAs)`, () => {

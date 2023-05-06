@@ -1,1 +1,1 @@
-export * from '../../api/image/alignment';
+export * from '../../api/image/alignment.js';

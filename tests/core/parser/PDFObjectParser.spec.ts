@@ -1,15 +1,13 @@
 import {
+  afterAll,
+  beforeAll,
+  beforeEach,
   describe,
   expect,
-  beforeAll,
-  jest,
-  beforeEach,
-  afterAll,
   it,
+  jest,
 } from '@jest/globals';
-import PDFPageLeaf from 'src/core/structures/PDFPageLeaf';
 import {
-  mergeIntoTypedArray,
   PDFArray,
   PDFBool,
   PDFCatalog,
@@ -20,13 +18,15 @@ import {
   PDFNull,
   PDFNumber,
   PDFObjectParser,
+  PDFPageLeaf,
   PDFPageTree,
   PDFRawStream,
   PDFRef,
   PDFString,
-  typedArrayFor,
+  mergeIntoTypedArray,
   numberToString,
-} from 'src/index';
+  typedArrayFor,
+} from '../../../src/index.js';
 
 type ParseOptions = { capNumbers?: boolean };
 

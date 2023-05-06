@@ -1,4 +1,4 @@
-import PDFFont from '../../api/PDFFont';
+import PDFFont from '../../api/PDFFont.js';
 import {
   Color,
   cmyk,
@@ -6,15 +6,15 @@ import {
   grayscale,
   rgb,
   setFillingColor,
-} from '../../api/colors';
-import PDFButton from '../../api/form/PDFButton';
-import PDFCheckBox from '../../api/form/PDFCheckBox';
-import PDFDropdown from '../../api/form/PDFDropdown';
-import PDFField from '../../api/form/PDFField';
-import PDFOptionList from '../../api/form/PDFOptionList';
-import PDFRadioGroup from '../../api/form/PDFRadioGroup';
-import PDFSignature from '../../api/form/PDFSignature';
-import PDFTextField from '../../api/form/PDFTextField';
+} from '../../api/colors.js';
+import PDFButton from '../../api/form/PDFButton.js';
+import PDFCheckBox from '../../api/form/PDFCheckBox.js';
+import PDFDropdown from '../../api/form/PDFDropdown.js';
+import PDFField from '../../api/form/PDFField.js';
+import PDFOptionList from '../../api/form/PDFOptionList.js';
+import PDFRadioGroup from '../../api/form/PDFRadioGroup.js';
+import PDFSignature from '../../api/form/PDFSignature.js';
+import PDFTextField from '../../api/form/PDFTextField.js';
 import {
   drawButton,
   drawCheckBox,
@@ -22,18 +22,18 @@ import {
   drawRadioButton,
   drawTextField,
   rotateInPlace,
-} from '../../api/operations';
-import { setFontAndSize } from '../../api/operators';
-import { adjustDimsForRotation, reduceRotation } from '../../api/rotations';
-import { TextAlignment } from '../../api/text/alignment';
+} from '../../api/operations.js';
+import { setFontAndSize } from '../../api/operators.js';
+import { adjustDimsForRotation, reduceRotation } from '../../api/rotations.js';
+import { TextAlignment } from '../../api/text/alignment.js';
 import {
   TextPosition,
   layoutCombedText,
   layoutMultilineText,
   layoutSinglelineText,
-} from '../../api/text/layout';
-import { PDFOperator, PDFWidgetAnnotation } from '../../core';
-import { findLastMatch } from '../../utils';
+} from '../../api/text/layout.js';
+import { PDFOperator, PDFWidgetAnnotation } from '../../core/index.js';
+import { findLastMatch } from '../../utils/index.js';
 
 /*********************** Appearance Provider Types ****************************/
 

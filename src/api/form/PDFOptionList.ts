@@ -1,17 +1,17 @@
-import PDFDocument from '../../api/PDFDocument';
-import PDFFont from '../../api/PDFFont';
-import PDFPage from '../../api/PDFPage';
-import { rgb } from '../../api/colors';
+import PDFDocument from '../../api/PDFDocument.js';
+import PDFFont from '../../api/PDFFont.js';
+import PDFPage from '../../api/PDFPage.js';
+import { rgb } from '../../api/colors.js';
 import PDFField, {
   FieldAppearanceOptions,
   assertFieldAppearanceOptions,
-} from '../../api/form/PDFField';
+} from '../../api/form/PDFField.js';
 import {
   AppearanceProviderFor,
   defaultOptionListAppearanceProvider,
   normalizeAppearance,
-} from '../../api/form/appearances';
-import { degrees } from '../../api/rotations';
+} from '../../api/form/appearances.js';
+import { degrees } from '../../api/rotations.js';
 
 import {
   AcroChoiceFlags,
@@ -21,13 +21,13 @@ import {
   PDFStream,
   PDFString,
   PDFWidgetAnnotation,
-} from '../../core';
+} from '../../core/index.js';
 import {
   assertIs,
   assertIsSubset,
   assertOrUndefined,
   assertPositive,
-} from '../../utils';
+} from '../../utils/index.js';
 
 /**
  * Represents an option list field of a [[PDFForm]].

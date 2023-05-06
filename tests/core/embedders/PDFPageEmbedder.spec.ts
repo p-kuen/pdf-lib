@@ -1,8 +1,13 @@
 import fs from 'fs';
 import { describe, expect, it } from '@jest/globals';
 
-import { PDFDocument } from 'src/api';
-import { PDFContext, PDFPageEmbedder, PDFRawStream, PDFRef } from 'src/core';
+import { PDFDocument } from '../../../src/api/index.js';
+import {
+  PDFContext,
+  PDFPageEmbedder,
+  PDFRawStream,
+  PDFRef,
+} from '../../../src/core/index.js';
 
 const examplePdf = fs.readFileSync('./assets/pdfs/normal.pdf');
 

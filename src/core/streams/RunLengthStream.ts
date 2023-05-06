@@ -6,8 +6,8 @@
  * under the Apache 2.0 open source license.
  */
 
-import DecodeStream from '../../core/streams/DecodeStream';
-import { StreamType } from '../../core/streams/Stream';
+import DecodeStream from '../../core/streams/DecodeStream.js';
+import { StreamType } from '../../core/streams/Stream.js';
 
 class RunLengthStream extends DecodeStream {
   private stream: StreamType;

@@ -1,19 +1,19 @@
 import {
   UnexpectedObjectTypeError,
   UnsupportedEncodingError,
-} from '../../core/errors';
-import PDFArray from '../../core/objects/PDFArray';
-import PDFDict from '../../core/objects/PDFDict';
-import PDFName from '../../core/objects/PDFName';
-import PDFNull from '../../core/objects/PDFNull';
-import PDFNumber from '../../core/objects/PDFNumber';
-import PDFRawStream from '../../core/objects/PDFRawStream';
-import Ascii85Stream from '../../core/streams/Ascii85Stream';
-import AsciiHexStream from '../../core/streams/AsciiHexStream';
-import FlateStream from '../../core/streams/FlateStream';
-import LZWStream from '../../core/streams/LZWStream';
-import RunLengthStream from '../../core/streams/RunLengthStream';
-import Stream, { StreamType } from '../../core/streams/Stream';
+} from '../../core/errors.js';
+import PDFArray from '../../core/objects/PDFArray.js';
+import PDFDict from '../../core/objects/PDFDict.js';
+import PDFName from '../../core/objects/PDFName.js';
+import PDFNull from '../../core/objects/PDFNull.js';
+import PDFNumber from '../../core/objects/PDFNumber.js';
+import PDFRawStream from '../../core/objects/PDFRawStream.js';
+import Ascii85Stream from '../../core/streams/Ascii85Stream.js';
+import AsciiHexStream from '../../core/streams/AsciiHexStream.js';
+import FlateStream from '../../core/streams/FlateStream.js';
+import LZWStream from '../../core/streams/LZWStream.js';
+import RunLengthStream from '../../core/streams/RunLengthStream.js';
+import Stream, { StreamType } from '../../core/streams/Stream.js';
 
 const decodeStream = (
   stream: StreamType,
