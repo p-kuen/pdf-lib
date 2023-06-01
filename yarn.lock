@@ -300,9 +300,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@patcher56/pdf-lib@workspace:."
   dependencies:
+    "@patcher56/upng": ^2.0.0-beta.0
     "@pdf-lib/fontkit": ^1.1.1
     "@pdf-lib/standard-fonts": ^1.0.0
-    "@pdf-lib/upng": ^1.0.1
     "@rollup/plugin-commonjs": ^24.1.0
     "@rollup/plugin-json": ^6.0.0
     "@rollup/plugin-node-resolve": ^15.0.2
@@ -323,6 +323,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@patcher56/upng@npm:^2.0.0-beta.0":
+  version: 2.0.0-beta.0
+  resolution: "@patcher56/upng@npm:2.0.0-beta.0"
+  dependencies:
+    pako: ^2.1.0
+  checksum: 93fa072d0c0dc67ef72dabefe7990d4beb32d8a1bf800b31d4e7d387dd799d73d556f6c1b4d54932cfa158200f81891bf4028432d3e32b34b0ab3598b410e9d8
+  languageName: node
+  linkType: hard
+
 "@pdf-lib/fontkit@npm:^1.1.1":
   version: 1.1.1
   resolution: "@pdf-lib/fontkit@npm:1.1.1"
@@ -340,14 +349,6 @@ __metadata:
   checksum: 7dc629b83862424a64b10c7ae34d789e0045a1a589f34a66a7f8e197f177cdb410969424e5d90f67b35c848db8b045cfa0a664941bdfb2d9b5413dbf44232981
   languageName: node
   linkType: hard
-
-"@pdf-lib/upng@portal:/Users/patrickkuen/Developer/personal/upng::locator=%40patcher56%2Fpdf-lib%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@pdf-lib/upng@portal:/Users/patrickkuen/Developer/personal/upng::locator=%40patcher56%2Fpdf-lib%40workspace%3A."
-  dependencies:
-    pako: ^2.1.0
-  languageName: node
-  linkType: soft
 
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
