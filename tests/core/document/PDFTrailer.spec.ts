@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 import { PDFTrailer } from '../../../src/core/index.js';
 import { toCharCode, typedArrayFor } from '../../../src/utils/index.js';
 

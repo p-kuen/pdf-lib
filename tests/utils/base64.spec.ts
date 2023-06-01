@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 import fs from 'fs';
 
 import { decodeFromBase64DataUri } from '../../src/utils/index.js';

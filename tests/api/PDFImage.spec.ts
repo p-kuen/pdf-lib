@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
 import { PDFDocument, PDFImage } from '../../src/api/index.js';
 import { PngEmbedder } from '../../src/core/index.js';

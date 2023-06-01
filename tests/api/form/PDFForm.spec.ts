@@ -5,8 +5,8 @@ import {
   describe,
   expect,
   it,
-  jest,
-} from '@jest/globals';
+  vi,
+} from 'vitest';
 import fs from 'fs';
 
 import {
@@ -70,14 +70,14 @@ describe(`PDFForm`, () => {
     const ignoredWarnings = [
       'Removing XFA form data as pdf-lib does not support reading or writing XFA',
     ];
-    console.warn = jest.fn((...args: any[]) => {
+    console.warn = vi.fn((...args: any[]) => {
       const isIgnored = ignoredWarnings.find((iw) => args[0].includes(iw));
       if (!isIgnored) origConsoleWarn(...args);
     });
   });
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   afterAll(() => {

@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 import { PNG } from '../../src/utils/png.js';
 
 describe(`PNG`, () => {

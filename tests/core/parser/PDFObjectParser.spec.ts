@@ -5,8 +5,8 @@ import {
   describe,
   expect,
   it,
-  jest,
-} from '@jest/globals';
+  vi,
+} from 'vitest';
 import {
   PDFArray,
   PDFBool,
@@ -53,14 +53,14 @@ describe(`PDFObjectParser`, () => {
     const ignoredWarnings = [
       'Parsed number that is too large for some PDF readers:',
     ];
-    console.warn = jest.fn((...args: any[]) => {
+    console.warn = vi.fn((...args: any[]) => {
       const isIgnored = ignoredWarnings.find((iw) => args[0].includes(iw));
       if (!isIgnored) origConsoleWarn(...args);
     });
   });
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   afterAll(() => {

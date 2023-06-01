@@ -1,6 +1,6 @@
 import fontkit from '@pdf-lib/fontkit';
 import fs from 'fs';
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
 import {
   CustomFontEmbedder,

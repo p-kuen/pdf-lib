@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
 import AsciiHexStream from '../../../src/core/streams/AsciiHexStream.js';
 import Stream from '../../../src/core/streams/Stream.js';

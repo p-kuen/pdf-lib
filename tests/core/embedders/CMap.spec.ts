@@ -1,6 +1,6 @@
 import fontkit, { Font, Glyph } from '@pdf-lib/fontkit';
 import fs from 'fs';
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
 import { createCmap } from '../../../src/core/embedders/CMap.js';
 import { byAscendingId, sortedUniq } from '../../../src/utils/index.js';

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
 import FlateStream from '../../../src/core/streams/FlateStream.js';
 import Stream from '../../../src/core/streams/Stream.js';

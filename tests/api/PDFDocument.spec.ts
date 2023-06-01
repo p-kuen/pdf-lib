@@ -5,8 +5,8 @@ import {
   describe,
   expect,
   it,
-  jest,
-} from '@jest/globals';
+  vi,
+} from 'vitest';
 import fontkit from '@pdf-lib/fontkit';
 import fs from 'fs';
 
@@ -57,14 +57,14 @@ describe(`PDFDocument`, () => {
         'Trying to parse invalid object:',
         'Invalid object ref:',
       ];
-      console.warn = jest.fn((...args: any[]) => {
+      console.warn = vi.fn((...args: any[]) => {
         const isIgnored = ignoredWarnings.find((iw) => args[0].includes(iw));
         if (!isIgnored) origConsoleWarn(...args);
       });
     });
 
     beforeEach(() => {
-      jest.clearAllMocks();
+      vi.clearAllMocks();
     });
 
     afterAll(() => {

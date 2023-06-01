@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 import fontkit from '@pdf-lib/fontkit';
 import { FontNames } from '@pdf-lib/standard-fonts';
 import fs from 'fs';

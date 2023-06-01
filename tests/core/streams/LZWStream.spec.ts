@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
 import LZWStream from '../../../src/core/streams/LZWStream.js';
 import Stream from '../../../src/core/streams/Stream.js';

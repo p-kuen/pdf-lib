@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
 import {
   PDFContext,
@@ -25,6 +25,7 @@ describe(`PngEmbedder`, () => {
 
     expect(context.enumerateIndirectObjects().length).toBe(0);
     const ref = await embedder.embedIntoContext(context, predefinedRef);
+    console.log(ref);
     expect(context.enumerateIndirectObjects().length).toBe(1);
     expect(context.lookup(predefinedRef)).toBeInstanceOf(PDFRawStream);
     expect(ref).toBe(predefinedRef);

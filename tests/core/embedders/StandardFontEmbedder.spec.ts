@@ -1,5 +1,5 @@
 import { FontNames } from '@pdf-lib/standard-fonts';
-import { describe, expect, it } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
 import {
   PDFContext,

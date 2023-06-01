@@ -3,11 +3,11 @@ import {
   describe,
   expect,
   beforeAll,
-  jest,
+  vi,
   beforeEach,
   afterAll,
   it,
-} from '@jest/globals';
+} from 'vitest';
 
 import {
   CharCodes,
@@ -32,14 +32,14 @@ describe(`PDFParser`, () => {
       'Invalid object ref:',
       'Removing parsed object: 0 0 R',
     ];
-    console.warn = jest.fn((...args: any[]) => {
+    console.warn = vi.fn((...args: any[]) => {
       const isIgnored = ignoredWarnings.find((iw) => args[0].includes(iw));
       if (!isIgnored) origConsoleWarn(...args);
     });
   });
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   afterAll(() => {
