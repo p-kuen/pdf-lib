@@ -200,10 +200,9 @@ For most development, manual compilation isn't necessary. The scratchpad and uni
 
 Compiling the project will produce 4 artifacts:
 
-- **`compiled/cjs`** - a directory containing a CommonJS version of the project (uses `require` instead of `import`). This folder contains `.js` and [`.d.ts`](https://stackoverflow.com/a/21247316) files, rather than the `.ts` files that the project source is written in.
 - **`compiled/es`** - a directory containing an ES2022 version of the project (uses `import` instead of `require`). This folder contains `.js` and [`.d.ts`](https://stackoverflow.com/a/21247316) files, rather than the `.ts` files that the project source is written in.
-- **`compiled/dist/pdf-lib.js`** - a single JavaScript file containing a [UMD](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) version of the project.
-- **`compiled/dist/pdf-lib.min.js`** - a single JavaScript file containing a minified [UMD](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) version of the project.
+- **`compiled/dist/pdf-lib.js`** - a single JavaScript file containing a bundled **ESM** version of the project.
+- **`compiled/dist/pdf-lib.min.js`** - a single JavaScript file containing a bundled and minified **ESM** version of the project.
 
 To compile the project, execute the following:
 
@@ -211,25 +210,7 @@ To compile the project, execute the following:
 yarn build
 ```
 
-This should output something like the following:
-
-```
-yarn run v1.16.0
-$ yarn build:cjs && yarn build:es && yarn build:umd && yarn build:umd:min
-$ tsc --module commonjs --outDir cjs
-$ tsc --module ES2015 --outDir es
-$ rollup --config rollup.config.js --file dist/pdf-lib.js
-
-es/index.js → dist/pdf-lib.js...
-created dist/pdf-lib.js in 1.5s
-$ rollup --config rollup.config.js --file dist/pdf-lib.min.js --environment MINIFY
-
-es/index.js → dist/pdf-lib.min.js...
-created dist/pdf-lib.min.js in 4s
-✨  Done in 17.34s.
-```
-
-The compiled artifacts will be located in the `cjs/`, `es/`, and `dist/` directories.
+The compiled artifacts will be located in the `es/`, and `dist/` directories.
 
 ## Running the Linter
 
